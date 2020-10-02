@@ -5,10 +5,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Przelicznik walut</title>
-    <!-- <link rel="stylesheet" href="css/style.css"> -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
+    <div class="container">
+        <div class="background">
+            <h1>Przelicznik walut</h1>
+            <form class="form">
+                <input type="text" id="amount" placeholder="Wpisz kwotę" class="form__amount-input">
+                <div class="form__currency-container">
+                    <label for="currency" class="form__currency-label">Przelicz z </label>
+                    <select name="Waluta" id="currency" class="form__currency-input">
+                        <option value="PLN">PLN</option>
+                        <option value="EUR">EUR</option>
+                        <option value="USD">USD</option>
+                    </select>
+                </div>
+                <div class="form__currency-container">
+                    <label for="currency" class="form__currency-label">Przelicz na</label>
+                    <select name="Waluta" id="result" class="form__currency-input">
+                        <option value="PLN">PLN</option>
+                        <option value="EUR">EUR</option>
+                        <option value="USD">USD</option>
+                    </select>
+                </div>
+                <button>Przelicz</button>
+            </form>
+
+            <div class="result">
+                <h2></h2>
+            </div>
+        </div>
+    </div>
     <script src="js/app.js"></script>
 </body>
 
