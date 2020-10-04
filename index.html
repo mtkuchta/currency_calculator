@@ -14,31 +14,34 @@
         <div class="background">
             <h1>Przelicznik walut</h1>
             <form class="form">
-                <input type="text" id="amount" placeholder="Wpisz kwotę" class="form__amount-input">
+                <p>Przelicz walutę po dzisiejszym średnim kursie NBP:</p>
+                <input type="text" id="amount" placeholder="Wpisz kwotę" class="form__amount-input" name="amount">
                 <div class="form__currency-container">
-                    <label for="currency" class="form__currency-label">Przelicz z </label>
-                    <select name="Waluta" id="currency" class="form__currency-input">
-                        <option value="PLN">PLN</option>
-                        <option value="EUR">EUR</option>
-                        <option value="USD">USD</option>
+                    <label for="currency" class="form__currency-label"> Przelicz z: </label>
+                    <select id="currency" class="form__currency-input" name="currencyIn">
+                        <option id="inPLN" value="PLN" selected="selected">PLN</option>
+                        <option id="inEUR" value="EUR">EUR</option>
+                        <option id="inUSD" value="USD">USD</option>
                     </select>
                 </div>
                 <div class="form__currency-container">
-                    <label for="currency" class="form__currency-label">Przelicz na</label>
-                    <select name="Waluta" id="result" class="form__currency-input">
-                        <option value="PLN">PLN</option>
-                        <option value="EUR">EUR</option>
-                        <option value="USD">USD</option>
+                    <label for="result" class="form__currency-label">Przelicz na:</label>
+                    <select id="result" class="form__currency-input" name="currencyOut">
+                        <option id="outEUR" value="EUR" selected="selected">EUR</option>
+                        <option id="outUSD" value="USD">USD</option>
+                        <option id="outPLN" value="PLN">PLN</option>
                     </select>
                 </div>
                 <button>Przelicz</button>
             </form>
 
             <div class="result">
-                <h2></h2>
+                <h2 class="rate"></h2>
+                <h2 class="result"></h2>
             </div>
         </div>
     </div>
+    <script src="js/CurrencyCalculator.js"></script>
     <script src="js/app.js"></script>
 </body>
 
