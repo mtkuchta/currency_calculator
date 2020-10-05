@@ -16,11 +16,12 @@ class CurrencyCalculator {
             this.form.elements.currencyIn.value,
             this.form.elements.currencyOut.value,
         ));
+
     }
 
 
-
     checkInput(e) {
+
         if (e.target.value === 'EUR' || e.target.value === 'USD') {
             this.outEUR.disabled = true;
             this.outUSD.disabled = true;

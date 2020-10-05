@@ -15,7 +15,8 @@
             <h1>Przelicznik walut</h1>
             <form class="form">
                 <p>Przelicz walutę po dzisiejszym średnim kursie NBP:</p>
-                <input type="text" id="amount" placeholder="Wpisz kwotę" class="form__amount-input" name="amount">
+                <input type="number" id="amount" placeholder="Wpisz kwotę" class="form__amount-input" name="amount"
+                    required>
                 <div class="form__currency-container">
                     <label for="currency" class="form__currency-label"> Przelicz z: </label>
                     <select id="currency" class="form__currency-input" name="currencyIn">

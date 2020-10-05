@@ -66,7 +66,7 @@ html {
           align-items: center;
   font-size: 1.5rem;
   padding: 10px;
-  height: 50%;
+  height: 55%;
   font-size: 2.2rem;
   border-bottom: 2px solid white;
 }
@@ -94,6 +94,17 @@ html {
           box-shadow: 0 0 2px white;
   border-radius: 5px;
   text-align: right;
+  -moz-appearance: textfield;
+}
+
+.form__amount-input:focus {
+  -webkit-box-shadow: 0 0 2px darkorange;
+          box-shadow: 0 0 2px darkorange;
+  border: 2px solid darkorange;
+}
+
+.form__amount-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
 }
 
 .form__amount-input::-webkit-input-placeholder {
@@ -112,6 +123,11 @@ html {
   font-family: 'Montserrat';
 }
 
+.form__amount-input:focus {
+  -webkit-box-shadow: 3px solid darkorange;
+          box-shadow: 3px solid darkorange;
+}
+
 .form__currency-input {
   padding: 4px;
   margin-left: 10px;
@@ -122,6 +138,7 @@ html {
   border: 2px solid white;
   -webkit-box-shadow: 0 0 2px white;
           box-shadow: 0 0 2px white;
+  cursor: pointer;
 }
 
 .form__currency-label {
@@ -136,6 +153,9 @@ html {
   font-size: 2rem;
   border-radius: 5px;
   letter-spacing: 1px;
+  cursor: pointer;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .form button:hover {

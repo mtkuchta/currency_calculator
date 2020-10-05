@@ -56,7 +56,7 @@ html {
     align-items: center;
     font-size: 1.5rem;
     padding: 10px;
-    height: 50%;
+    height: 55%;
     font-size: 2.2rem;
     border-bottom: 2px solid white;
 
@@ -76,10 +76,25 @@ html {
         box-shadow: 0 0 2px white;
         border-radius: 5px;
         text-align: right;
+        -moz-appearance: textfield;
+
+        &:focus {
+            box-shadow: 0 0 2px darkorange;
+            border: 2px solid darkorange;
+        }
+
+        &::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+        }
+
 
 
         &::placeholder {
             font-family: 'Montserrat';
+        }
+
+        &:focus {
+            box-shadow: 3px solid darkorange;
         }
     }
 
@@ -92,6 +107,7 @@ html {
         background-color: lightblue;
         border: 2px solid white;
         box-shadow: 0 0 2px white;
+        cursor: pointer;
     }
 
     &__currency-label {
@@ -107,6 +123,8 @@ html {
         font-size: 2rem;
         border-radius: 5px;
         letter-spacing: 1px;
+        cursor: pointer;
+        transition: 0.3s;
 
 
         &:hover {
