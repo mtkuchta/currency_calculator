@@ -12,41 +12,49 @@ html {
     color: white;
 }
 
+.container {
+    width: 100%;
+    max-width: 1200px;
+    height: 100vh;
+    background-image: url('../img/dollar-1362244_1920.jpg');
+    background-size: cover;
+    opacity: 0.8;
+    margin: 0 auto;
+}
+
 .background {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: top;
+    justify-content: space-evenly;
     width: 100%;
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.9);
-
-}
-
-.container {
-    width: 100%;
-    height: 100vh;
-    // display: flex;
-    // flex-direction: column;
-    // align-items: center;
-    // justify-content: top;
-    background-image: url('../img/dollar-1362244_1920.jpg');
-    background-size: cover;
-    opacity: 0.8;
+    margin: 0 auto;
 
     h1 {
         text-transform: uppercase;
         width: 100%;
         text-align: center;
         font-size: 2.5rem;
-        margin: 10% 0 0 0;
+        margin: 5% 0 0 0;
         line-height: 4rem;
         border-bottom: 2px solid white;
-        padding-bottom: 10px;
+        padding-bottom: 20px;
+
+        @media(min-width:460px) {
+            font-size: 3rem;
+        }
+
+        @media(min-width:640px) {
+            font-size: 4rem;
+        }
 
     }
 
 }
+
+
 
 .form {
     width: 100%;
@@ -60,16 +68,26 @@ html {
     font-size: 2.2rem;
     border-bottom: 2px solid white;
 
+
+
     &__currency-container {
         display: flex;
         justify-content: space-between;
         align-items: center;
         width: 65%;
+
+        @media(min-width:640px) {
+            width: 50%;
+        }
+
+        @media(min-width:1024px) {
+            width: 35%;
+        }
     }
 
     &__amount-input {
         width: 70%;
-        padding: 10px;
+        padding: 10px 20px 10px 10px;
         font-size: 1.8rem;
         background-color: lightblue;
         border: 2px solid white;
@@ -77,6 +95,20 @@ html {
         border-radius: 5px;
         text-align: right;
         -moz-appearance: textfield;
+
+        @media(min-width:460px) {
+            width: 65%;
+        }
+
+        @media(min-width:640px) {
+            font-size: 3rem;
+            width: 50%;
+            padding: 15px;
+        }
+
+        @media(min-width:1024px) {
+            width: 40%;
+        }
 
         &:focus {
             box-shadow: 0 0 2px darkorange;
@@ -87,10 +119,9 @@ html {
             -webkit-appearance: none;
         }
 
-
-
         &::placeholder {
             font-family: 'Montserrat';
+
         }
 
         &:focus {
@@ -108,14 +139,30 @@ html {
         border: 2px solid white;
         box-shadow: 0 0 2px white;
         cursor: pointer;
+
+        @media(min-width:460px) {
+            font-size: 2rem;
+        }
+
+        @media(min-width:640px) {
+            font-size: 3.2rem;
+
+        }
     }
 
     &__currency-label {
         font-size: 2rem;
+
+        @media(min-width:460px) {
+            font-size: 2.2rem;
+        }
+
+        @media(min-width:640px) {
+            font-size: 3.2rem;
+        }
     }
 
     button {
-        // text-transform: uppercase;
         padding: 5px 30px;
         border: 3px solid white;
         background-color: lighten(black, 0%);
@@ -126,9 +173,16 @@ html {
         cursor: pointer;
         transition: 0.3s;
 
+        @media(min-width:460px) {
+            font-size: 2.5rem;
+        }
+
+        @media(min-width:640px) {
+            font-size: 4rem;
+        }
+
 
         &:hover {
-            // transform: scale(1.2);
             background-color: white;
             color: black;
         }
@@ -140,6 +194,12 @@ html {
         font-size: 1.8rem;
         line-height: 2.5rem;
 
+        @media(min-width:640px) {
+            font-size: 3rem;
+            line-height: 4rem;
+            padding: 0 50px 10px 50px;
+        }
+
     }
 
 }
@@ -149,6 +209,11 @@ div.result {
     height: 30%;
     padding: 30px 30px;
     font-size: 1.5rem;
+
+    @media(min-width:640px) {
+        font-size: 3rem;
+
+    }
 
     h2 {
         font-weight: 400;

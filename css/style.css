@@ -11,6 +11,16 @@ html {
   color: white;
 }
 
+.container {
+  width: 100%;
+  max-width: 1200px;
+  height: 100vh;
+  background-image: url("../img/dollar-1362244_1920.jpg");
+  background-size: cover;
+  opacity: 0.8;
+  margin: 0 auto;
+}
+
 .background {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -22,31 +32,36 @@ html {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: top;
-      -ms-flex-pack: top;
-          justify-content: top;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   width: 100%;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.9);
+  margin: 0 auto;
 }
 
-.container {
-  width: 100%;
-  height: 100vh;
-  background-image: url("../img/dollar-1362244_1920.jpg");
-  background-size: cover;
-  opacity: 0.8;
-}
-
-.container h1 {
+.background h1 {
   text-transform: uppercase;
   width: 100%;
   text-align: center;
   font-size: 2.5rem;
-  margin: 10% 0 0 0;
+  margin: 5% 0 0 0;
   line-height: 4rem;
   border-bottom: 2px solid white;
-  padding-bottom: 10px;
+  padding-bottom: 20px;
+}
+
+@media (min-width: 460px) {
+  .background h1 {
+    font-size: 3rem;
+  }
+}
+
+@media (min-width: 640px) {
+  .background h1 {
+    font-size: 4rem;
+  }
 }
 
 .form {
@@ -84,9 +99,21 @@ html {
   width: 65%;
 }
 
+@media (min-width: 640px) {
+  .form__currency-container {
+    width: 50%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .form__currency-container {
+    width: 35%;
+  }
+}
+
 .form__amount-input {
   width: 70%;
-  padding: 10px;
+  padding: 10px 20px 10px 10px;
   font-size: 1.8rem;
   background-color: lightblue;
   border: 2px solid white;
@@ -95,6 +122,26 @@ html {
   border-radius: 5px;
   text-align: right;
   -moz-appearance: textfield;
+}
+
+@media (min-width: 460px) {
+  .form__amount-input {
+    width: 65%;
+  }
+}
+
+@media (min-width: 640px) {
+  .form__amount-input {
+    font-size: 3rem;
+    width: 50%;
+    padding: 15px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .form__amount-input {
+    width: 40%;
+  }
 }
 
 .form__amount-input:focus {
@@ -141,8 +188,32 @@ html {
   cursor: pointer;
 }
 
+@media (min-width: 460px) {
+  .form__currency-input {
+    font-size: 2rem;
+  }
+}
+
+@media (min-width: 640px) {
+  .form__currency-input {
+    font-size: 3.2rem;
+  }
+}
+
 .form__currency-label {
   font-size: 2rem;
+}
+
+@media (min-width: 460px) {
+  .form__currency-label {
+    font-size: 2.2rem;
+  }
+}
+
+@media (min-width: 640px) {
+  .form__currency-label {
+    font-size: 3.2rem;
+  }
 }
 
 .form button {
@@ -158,6 +229,18 @@ html {
   transition: 0.3s;
 }
 
+@media (min-width: 460px) {
+  .form button {
+    font-size: 2.5rem;
+  }
+}
+
+@media (min-width: 640px) {
+  .form button {
+    font-size: 4rem;
+  }
+}
+
 .form button:hover {
   background-color: white;
   color: black;
@@ -170,11 +253,25 @@ html {
   line-height: 2.5rem;
 }
 
+@media (min-width: 640px) {
+  .form p {
+    font-size: 3rem;
+    line-height: 4rem;
+    padding: 0 50px 10px 50px;
+  }
+}
+
 div.result {
   width: 100%;
   height: 30%;
   padding: 30px 30px;
   font-size: 1.5rem;
+}
+
+@media (min-width: 640px) {
+  div.result {
+    font-size: 3rem;
+  }
 }
 
 div.result h2 {

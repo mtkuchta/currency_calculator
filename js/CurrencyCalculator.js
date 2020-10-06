@@ -9,6 +9,7 @@ class CurrencyCalculator {
         this.selectIn = document.getElementById('currency');
         this.amountIn = document.getElementById('amount');
         this.value = 0;
+        this.outPLN.disabled = true;
 
         this.selectIn.addEventListener('change', (e) => this.checkInput(e));
         this.form.addEventListener('submit', (e) => this.getData(e,
@@ -26,6 +27,7 @@ class CurrencyCalculator {
             this.outEUR.disabled = true;
             this.outUSD.disabled = true;
             this.outPLN.selected = true;
+            this.outPLN.disabled = false;
         } else {
             this.outEUR.disabled = false;
             this.outUSD.disabled = false;
