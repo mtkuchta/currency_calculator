@@ -20,7 +20,6 @@ class CurrencyCalculator {
 
     }
 
-
     checkInput(e) {
 
         if (e.target.value === 'EUR' || e.target.value === 'USD') {
